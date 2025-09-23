@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+// import puppy from "./images/puppy.png";
 import About from "./components/about";
 import Home from "./components/home.jsx";
 import Project from "./components/project";
@@ -20,11 +21,11 @@ function App() {
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <img
-                src="src\images\puppy.png"
-                alt=""
+                src="/images/puppy.png"
+                alt="puppy"
                 width="100"
                 height="85"
-                class="d-inline-block align-text-top"
+                className="d-inline-block align-text-top"
               ></img>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">

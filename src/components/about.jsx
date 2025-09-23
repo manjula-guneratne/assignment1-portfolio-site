@@ -7,7 +7,7 @@ function About() {
 
             <div class="d-flex justify-content-md-center">
                 <div class="flex-shrink-0">
-                    <img src="" alt="..."/>
+                    <img src="/images/Portfolio_image.jpg" alt="My portfolio image"/>
                 </div>
                 <div class="flex-grow-1 ms-3">
                     This is some content from a media component. You can replace this with any content and adjust it as needed.
