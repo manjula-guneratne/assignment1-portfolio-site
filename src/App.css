@@ -29,7 +29,12 @@ body {
   background-color: yellow;
 }
 
-.footer {
+/* .footer {
   height: 30px;
   background-color: blue;
+} */
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
 }

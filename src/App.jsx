@@ -17,18 +17,44 @@ function App() {
     <>
       <div class="container-fluid">
         <div class="header">
-          {/* <h1>Header section</h1> */}
 
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/components/about">About Me</Link>
-            <Link to="/components/project">Project</Link>
-            <Link to="/components/services">Services</Link>
-            <Link to="/components/contact">Contact Me</Link>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <img
+                src="src\images\puppy.png"
+                alt=""
+                width="100"
+                height="85"
+                class="d-inline-block align-text-top"
+              ></img>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/components/about">About Me</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/components/project">Project</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/components/services">Services</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/components/contact">Contact Me</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
+
         </div>
         <div class="content">
-          {/* <h2>Content section</h2> */}
+
+          <br></br>
+          <br></br>
+          <br />
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -37,9 +63,6 @@ function App() {
             <Route path="/components/services" element={<Services />} />
             <Route path="/components/contact" element={<Contact />} />
           </Routes>
-        </div>
-        <div class="footer">
-          <h3>Footer section</h3>
         </div>
       </div>
     </>
