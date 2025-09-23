@@ -8,6 +8,7 @@ import Home from "./components/home.jsx";
 import Project from "./components/project";
 import Services from "./components/services";
 import Contact from "./components/contact";
+import { Button } from 'react-bootstrap';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
         <Link to="/components/services">Services</Link>
         <Link to="/components/contact">Contact Me</Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/components/about" element={<About />} />
@@ -28,6 +30,18 @@ function App() {
         <Route path="/components/services" element={<Services />} />
         <Route path="/components/contact" element={<Contact />} />
       </Routes>
+
+      <div className="container-fluid">
+        <div className="header">
+          <h1>Header section</h1>
+        </div>
+        <div className="content">
+          <h2>Content section</h2>
+        </div>
+        <div className="footer">
+          <h3>Footer section</h3>
+        </div>
+      </div>
     </>
   );
 }
