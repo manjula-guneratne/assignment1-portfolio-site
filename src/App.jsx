@@ -8,7 +8,6 @@ import Home from "./components/home.jsx";
 import Project from "./components/project";
 import Services from "./components/services";
 import Contact from "./components/contact";
-import { Button } from "react-bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
