@@ -8,37 +8,37 @@ import Home from "./components/home.jsx";
 import Project from "./components/project";
 import Services from "./components/services";
 import Contact from "./components/contact";
-import { Button } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/components/about">About Me</Link>
-        <Link to="/components/project">Project</Link>
-        <Link to="/components/services">Services</Link>
-        <Link to="/components/contact">Contact Me</Link>
-      </nav>
+      <div class="container-fluid">
+        <div class="header">
+          {/* <h1>Header section</h1> */}
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/components/about" element={<About />} />
-        <Route path="/components/project" element={<Project />} />
-        <Route path="/components/services" element={<Services />} />
-        <Route path="/components/contact" element={<Contact />} />
-      </Routes>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/components/about">About Me</Link>
+            <Link to="/components/project">Project</Link>
+            <Link to="/components/services">Services</Link>
+            <Link to="/components/contact">Contact Me</Link>
+          </nav>
+        </div>
+        <div class="content">
+          {/* <h2>Content section</h2> */}
 
-      <div className="container-fluid">
-        <div className="header">
-          <h1>Header section</h1>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/components/about" element={<About />} />
+            <Route path="/components/project" element={<Project />} />
+            <Route path="/components/services" element={<Services />} />
+            <Route path="/components/contact" element={<Contact />} />
+          </Routes>
         </div>
-        <div className="content">
-          <h2>Content section</h2>
-        </div>
-        <div className="footer">
+        <div class="footer">
           <h3>Footer section</h3>
         </div>
       </div>
@@ -47,4 +47,3 @@ function App() {
 }
 
 export default App;
- 
