@@ -4,9 +4,10 @@ function About() {
   return (
     <div>
       <h1>About Me</h1>
+      <br />
 
-      <div class="d-flex justify-content-md-center">
-        <div class="flex-shrink-0">
+      <div class="d-flex">
+        <div class="flex-shrink-0 justify-content-end">
           <img
             src="/images/Portfolio_image.jpg"
             alt="My portfolio image"
@@ -14,8 +15,20 @@ function About() {
             height="100%"
           />
         </div>
-        <div class="flex-grow-1 ms-3">
-          Name: Manjula Guneratne
+
+        <div class="container d-flex justify-content-center">
+          <div class="w-50">
+            <table class="table table-dark table-striped table-borderless">
+              <tbody>
+                <tr>
+                  <td>Name: Manjula Guneratne</td>
+                </tr>
+                <tr>
+                  <td>He there</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
