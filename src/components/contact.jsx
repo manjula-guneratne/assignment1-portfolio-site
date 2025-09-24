@@ -1,31 +1,30 @@
-import { useState} from "react";
-
-
+import { useState } from "react";
 
 function Contact() {
-
   const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [contactNumber, setContactNumber] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [city, setCity] = useState("");
-  // const [state, setState] = useState("");
-  // const [zip, setZip] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zip, setZip] = useState("");
 
   function handleChange(event) {
 
-    setFirstName(event.target.value);
-    // setLastName(event.target.value);
-    // setContactNumber(event.target.value);
-    // setAddress(event.target.value);
-    // setCity(event.target.value);
-    // setState(event.target.value);
-    // setZip(event.target.value);
+    const { name, value } = event.target;
+
+    if (name === "firstName") setFirstName(value);
+    if (name === "lastName") setLastName(value);
+    if (name === "contactNumber") setContactNumber(value);
+    if (name === "address") setAddress(value);
+    if (name === "city") setCity(value);
+    if (name === "state") setState(value);
+    if (name === "zip") setZip(value);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    alert(firstName);
+    alert(firstName+" "+lastName+"\n"+contactNumber+"\n"+address+"\n"+city+", "+state+" "+zip);
   }
 
   return (
@@ -43,13 +42,27 @@ function Contact() {
             <label htmlFor="inputFirstName" className="htmlForm-label">
               First Name
             </label>
-            <input type="text" className="form-control" id="inputFirstName" value={firstName} onChange={handleChange}/>
+            <input
+              type="text"
+              className="form-control"
+              id="inputFirstName"
+              name="firstName"
+              value={firstName}
+              onChange={handleChange}
+            />
           </div>
           <div className="col-md-4 text-start">
             <label htmlFor="inputSecondName" className="htmlForm-label">
               Last Name
             </label>
-            <input type="text" className="form-control" id="inputSecondName" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputSecondName"
+              name="lastName"
+              value={lastName}
+              onChange={handleChange}
+            />
           </div>
           <div className="col-md-4 text-start">
             <label htmlFor="inputContactNumber" className="htmlForm-label">
@@ -59,6 +72,9 @@ function Contact() {
               type="text"
               className="form-control"
               id="inputContactNumber"
+              name="contactNumber"
+              value={contactNumber}
+              onChange={handleChange}
             />
           </div>
           <div className="col-12 text-start">
@@ -68,27 +84,51 @@ function Contact() {
             <input
               type="text"
               className="form-control"
-              id="inputAddress2"
+              id="inputAddress"
+              name="address"
               placeholder="Apartment, studio, or floor"
+              value={address}
+              onChange={handleChange}
             />
           </div>
           <div className="col-md-6 text-start">
             <label htmlFor="inputCity" className="form-label">
               City
             </label>
-            <input type="text" className="form-control" id="inputCity" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputCity"
+              name = "city"
+              value={city}
+              onChange={handleChange}
+            />
           </div>
           <div className="col-md-4 text-start">
             <label htmlFor="inputState" className="form-label">
               State
             </label>
-            <input type="text" className="form-control" id="inputState" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputState"
+              name = "state"
+              value={state}
+              onChange={handleChange}
+            />
           </div>
           <div className="col-md-2 text-start">
             <label htmlFor="inputZip" className="form-label">
               Zip
             </label>
-            <input type="text" className="form-control" id="inputZip" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputZip"
+              name = "zip"
+              value={zip}
+              onChange={handleChange}
+            />
           </div>
           <div className="col-12 text-start">
             <button type="submit" className="btn btn-primary">
