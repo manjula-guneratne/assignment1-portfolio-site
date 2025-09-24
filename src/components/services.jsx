@@ -4,7 +4,7 @@ function Services() {
     return (
         <div>
             <h1>My Services</h1>
-            <p>This is the Services page.</p>
+            <img src="/images/services_img.png" className="img-fluid" alt="..." style={{ height: "80vh", objectFit: "cover" }}/>
         </div>
     ); 
 }
