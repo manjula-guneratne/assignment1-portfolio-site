@@ -20,7 +20,7 @@ function App() {
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <img
-                src="src\images\puppy.png"
+                src="/images/puppy.png"
                 alt=""
                 width="100"
                 height="85"
