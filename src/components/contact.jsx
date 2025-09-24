@@ -1,6 +1,33 @@
-import react from "react";
+import { useState} from "react";
+
+
 
 function Contact() {
+
+  const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [contactNumber, setContactNumber] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [city, setCity] = useState("");
+  // const [state, setState] = useState("");
+  // const [zip, setZip] = useState("");
+
+  function handleChange(event) {
+
+    setFirstName(event.target.value);
+    // setLastName(event.target.value);
+    // setContactNumber(event.target.value);
+    // setAddress(event.target.value);
+    // setCity(event.target.value);
+    // setState(event.target.value);
+    // setZip(event.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(firstName);
+  }
+
   return (
     <>
       <div>
@@ -11,12 +38,12 @@ function Contact() {
         className="container d-flex justify-content-center align-items-center"
         style={{ minHeight: "5vh" }}
       >
-        <form className="row g-3">
+        <form className="row g-3" onSubmit={handleSubmit}>
           <div className="col-md-4 text-start">
             <label htmlFor="inputFirstName" className="htmlForm-label">
               First Name
             </label>
-            <input type="text" className="form-control" id="inputFirstName" />
+            <input type="text" className="form-control" id="inputFirstName" value={firstName} onChange={handleChange}/>
           </div>
           <div className="col-md-4 text-start">
             <label htmlFor="inputSecondName" className="htmlForm-label">
@@ -63,8 +90,8 @@ function Contact() {
             </label>
             <input type="text" className="form-control" id="inputZip" />
           </div>
-          <div class="col-12 text-start">
-            <button type="submit" class="btn btn-primary">
+          <div className="col-12 text-start">
+            <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
