@@ -29,7 +29,8 @@ body {
 .content {
   flex: 1;  /* take up all available space */
   min-height: 500px;
-  background-color: yellow;
+  background-image: url('/images/pattern.jpg');
+  background-repeat: repeat;
 }
 
 /* Changed navigation bar padding */
