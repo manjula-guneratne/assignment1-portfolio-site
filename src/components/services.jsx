@@ -1,3 +1,10 @@
+/*
+File name: App.css
+Student's Name: Manjula Gunaratne
+Student ID: 300459860
+Date: September 25, 2025
+*/
+
 import React from 'react';
 
 function Services() {

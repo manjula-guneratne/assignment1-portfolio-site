@@ -1,6 +1,12 @@
+/*
+File name: App.css
+Student's Name: Manjula Gunaratne
+Student ID: 300459860
+Date: September 25, 2025
+*/
+
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-// import puppy from "./images/puppy.png";
 import About from "./components/about";
 import Home from "./components/home.jsx";
 import Project from "./components/project";
