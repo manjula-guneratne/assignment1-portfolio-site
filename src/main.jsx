@@ -14,6 +14,7 @@ import {BrowserRouter} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* BrowserRouter to enable link/route/navigate between pages */}
     <BrowserRouter>
       <App />
     </BrowserRouter>

@@ -23,6 +23,7 @@ function Home() {
 
       <br />
       <br />
+      {/* Link use to navigate to other pages */}
       <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <Link to="/components/about" className="btn btn-primary">
           About Page

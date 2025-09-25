@@ -1,3 +1,4 @@
+/* Font used in this Project */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Link CSS designs */
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,6 +24,7 @@ a:hover {
   color: #535bf2;
 }
 
+/* Page body/contect restrictions */
 body {
   margin: 0;
   display: flex;
@@ -30,11 +33,13 @@ body {
   min-height: 100vh;
 }
 
+/* H1 header */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* Button design choices */
 button {
   border-radius: 8px;
   border: 1px solid transparent;

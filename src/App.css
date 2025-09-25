@@ -5,42 +5,40 @@ Student ID: 300459860
 Date: September 25, 2025
 */
 
+/* Entire page background colour */
 body {
   background-color: black;
 } 
 
+/* Main container for the entire app */
 #root {
-  /* max-width: 1280px; */
   width: 80%;
   height: auto;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 
+/* Header makes space for the Navigation bar on top */
 .header {
   height: 50px;
-  background-color: red;
 }
 
+/* Content body choices */
 .content {
   flex: 1;  /* take up all available space */
   min-height: 500px;
   background-color: yellow;
 }
 
-/* .footer {
-  height: 30px;
-  background-color: blue;
-} */
-
+/* Changed navigation bar padding */
 .navbar-nav > li{
   padding-left:30px;
   padding-right:30px;
 }
 
+/* Removed Container column padding */
 .no-gutters > .col {
   padding-right: 0 !important;
   padding-left: 0 !important;

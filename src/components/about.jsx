@@ -13,19 +13,19 @@ function About() {
       <h1>About Me</h1>
       <br />
 
-      <div class="d-flex">
-        <div class="flex-shrink-0 justify-content-end">
-          <img
-            src="/images/Portfolio_image.jpg"
-            alt="My portfolio image"
-            width="50%"
-            height="100%"
-          />
-        </div>
-
-        <div class="container d-flex justify-content-center">
-          <div class="w-50">
-            <table class="table table-dark table-striped table-borderless">
+      {/* Center the Container and add the Profile image and Table inside it */}
+      <div className="container d-flex justify-content-center">
+        <div className="row">
+          <div className="col">
+            <img
+              src="/images/Portfolio_image.jpg"
+              alt="My portfolio image"
+              width="80%"
+              height="100%"
+            />
+          </div>
+          <div className="col">
+            <table className="table table-dark table-striped table-borderless">
               <tbody>
                 <tr>
                   <td>Name: Manjula Guneratne</td>
@@ -39,11 +39,20 @@ function About() {
         </div>
       </div>
 
-      <p>
-        <a href="https://docs.google.com/document/d/14va3Vk7lsrwfy7Lf2inikEqJVZyLk4Wd9giwjgRBy1A/edit?usp=sharing">
+      <br />
+
+      {/* Resume Link Button */}
+      <div class="d-grid gap-2 col-3 mx-auto">
+        <a
+          class="btn btn-primary"
+          role="button"
+          href="https://docs.google.com/document/d/14va3Vk7lsrwfy7Lf2inikEqJVZyLk4Wd9giwjgRBy1A/edit?usp=sharing"
+        >
           Resume Link
         </a>
-      </p>
+      </div>
+
+      <br />
     </div>
   );
 }
