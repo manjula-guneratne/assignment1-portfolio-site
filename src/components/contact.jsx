@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +9,8 @@ function Contact() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
+
+  const navigate = useNavigate();
 
   function handleChange(event) {
 
@@ -25,6 +28,8 @@ function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
     alert(firstName+" "+lastName+"\n"+contactNumber+"\n"+address+"\n"+city+", "+state+" "+zip);
+
+    navigate("/");
   }
 
   return (
