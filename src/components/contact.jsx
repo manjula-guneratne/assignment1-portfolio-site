@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Contact() {
+  // Use state to manage form inputs
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
@@ -17,12 +18,15 @@ function Contact() {
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
 
+  // Navigate to home page after form submission
   const navigate = useNavigate();
 
+  // Handle change for form inputs
   function handleChange(event) {
-
+    // Destructure name and value from the event target
     const { name, value } = event.target;
 
+    // Update the corresponding state based on the input name
     if (name === "firstName") setFirstName(value);
     if (name === "lastName") setLastName(value);
     if (name === "contactNumber") setContactNumber(value);
@@ -32,10 +36,41 @@ function Contact() {
     if (name === "zip") setZip(value);
   }
 
+  // Handle form submission
   function handleSubmit(e) {
     e.preventDefault();
-    alert(firstName+" "+lastName+"\n"+contactNumber+"\n"+address+"\n"+city+", "+state+" "+zip);
 
+    if (
+      !firstName ||
+      !lastName ||
+      !contactNumber ||
+      !address ||
+      !city ||
+      !state ||
+      !zip
+    ) {
+      alert("Please fill in all fields.");
+      return;
+    } else {
+      // Display an alert with the form data
+      alert(
+        firstName +
+          " " +
+          lastName +
+          "\n" +
+          contactNumber +
+          "\n" +
+          address +
+          "\n" +
+          city +
+          ", " +
+          state +
+          " " +
+          zip + "\n\nThank you for contacting me!"
+      );
+    }
+
+    // Navigate to the home page after submission
     navigate("/");
   }
 
@@ -111,7 +146,7 @@ function Contact() {
               type="text"
               className="form-control"
               id="inputCity"
-              name = "city"
+              name="city"
               value={city}
               onChange={handleChange}
             />
@@ -124,7 +159,7 @@ function Contact() {
               type="text"
               className="form-control"
               id="inputState"
-              name = "state"
+              name="state"
               value={state}
               onChange={handleChange}
             />
@@ -137,7 +172,7 @@ function Contact() {
               type="text"
               className="form-control"
               id="inputZip"
-              name = "zip"
+              name="zip"
               value={zip}
               onChange={handleChange}
             />

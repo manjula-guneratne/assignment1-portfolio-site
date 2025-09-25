@@ -14,6 +14,7 @@ function Project() {
         <h1>My Projects</h1>
         <p>Click on the Card to Visit the project</p>
       </div>
+      {/* Containers are used to display 3 projects. Each of them are linked to their web sites.*/}
       <div className="container">
         <div className="row no-gutters">
           <div className="col">
