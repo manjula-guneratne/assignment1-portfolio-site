@@ -25,13 +25,24 @@ function About() {
             />
           </div>
           <div className="col">
-            <table className="table table-dark table-striped table-borderless">
+            <table className="table table-borderless style={{ backgroundColor: 'transparent' }}">
               <tbody>
                 <tr>
                   <td>Name: Manjula Guneratne</td>
                 </tr>
                 <tr>
-                  <td>He there</td>
+                  <td>
+                    I am currently working as a Maintenance Coordinator, with a
+                    strong passion for transitioning into the tech field. I hold
+                    a Full-Stack Web Development certification from the
+                    University of Toronto and am in my second year of the
+                    Artificial Intelligence – Software Engineering program at
+                    Centennial College. I believe in hard work and that actions
+                    speak louder than words. My next step is to pursue exciting
+                    opportunities in artificial intelligence or automation,
+                    where I can apply both my technical training and hands-on
+                    problem-solving skills.
+                  </td>
                 </tr>
               </tbody>
             </table>
