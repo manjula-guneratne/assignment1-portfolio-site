@@ -76,6 +76,38 @@ server.post("/api/contacts", async (req, res) => {
   }
 });
 
+//Update a contact by ID
+server.put("/api/contacts/:id", async (req, res) => {
+    try{
+        const id = req.params.id;
+        const response = await Contacts.findByIdAndUpdate(id, req.body, {new: true});
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
+//Delete a contact by ID
+server.delete("/api/contacts/:id", async (req,res) => {
+    try{
+        const id = req.params.id;
+        const response = await Contacts.findByIdAndDelete(id);
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
+//Delete all contacts
+server.delete("/api/contacts", async (req, res) => {
+    try{
+        const response = await Contacts.deleteMany({});
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
 server.listen(process.env.PORT, () => {
   console.log("Server is running on port: ", process.env.PORT);
 });
