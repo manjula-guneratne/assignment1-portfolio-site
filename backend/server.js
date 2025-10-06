@@ -42,6 +42,11 @@ const Users = mongoose.model(
   })
 );
 
+//Home route
+server.get("/", (req, res) => {
+    res.json({"message": "Welcome to My Portfolio application."});
+});
+
 // CRUD API for Contacts
 
 //Get all contacts
@@ -58,8 +63,8 @@ server.get("/api/contacts", async (req, res) => {
 server.get("/api/contacts/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const contact = await Contacts.findById(id);
-    res.json(contact);
+    const contacts = await Contacts.findById(id);
+    res.json(contacts);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -68,8 +73,8 @@ server.get("/api/contacts/:id", async (req, res) => {
 //Create a new contact
 server.post("/api/contacts", async (req, res) => {
   try {
-    const contact = req.body;
-    const response = await Contacts.create(contact);
+    const contacts = req.body;
+    const response = await Contacts.create(contacts);
     res.json(response);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -102,6 +107,72 @@ server.delete("/api/contacts/:id", async (req,res) => {
 server.delete("/api/contacts", async (req, res) => {
     try{
         const response = await Contacts.deleteMany({});
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
+// CRUD API for Users
+
+//Get all users
+server.get("/api/users", async (req, res) => {
+  try {
+    const users = await Users.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+//Get a users by ID
+server.get("/api/users/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const users = await Users.findById(id);
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+//Create a new users
+server.post("/api/users", async (req, res) => {
+  try {
+    const users = req.body;
+    const response = await Users.create(users);
+    res.json(response);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+//Update a users by ID
+server.put("/api/users/:id", async (req, res) => {
+    try{
+        const id = req.params.id;
+        const response = await Users.findByIdAndUpdate(id, req.body, {new: true});
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
+//Delete a users by ID
+server.delete("/api/users/:id", async (req,res) => {
+    try{
+        const id = req.params.id;
+        const response = await Users.findByIdAndDelete(id);
+        res.json(response);
+    } catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
+//Delete all users
+server.delete("/api/users", async (req, res) => {
+    try{
+        const response = await Users.deleteMany({});
         res.json(response);
     } catch(err){
         res.status(500).json({message: err.message});
